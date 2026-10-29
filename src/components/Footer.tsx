@@ -26,7 +26,7 @@ export function Footer() {
   return (
     <footer className="relative mt-10 bg-bg-2">
       <Wave
-        className="absolute -top-[39px] left-0 text-bg-2 sm:-top-[63px]"
+        className="absolute -top-[23px] left-0 text-bg-2 sm:-top-[39px]"
         flip
       />
       <div className="mx-auto grid max-w-6xl gap-10 px-5 pb-12 pt-10 md:grid-cols-[1.4fr_1fr_1.2fr]">

@@ -81,7 +81,7 @@ export default function HomePage() {
         <Sparkle className="absolute bottom-24 left-[8%] h-7 w-7 animate-twinkle text-sky-soft" />
         <Sparkle className="absolute right-[6%] top-1/3 h-6 w-6 animate-twinkle text-sky-soft" />
 
-        <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-28 pt-14 sm:pt-20 lg:grid-cols-[1.05fr_1fr]">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-16 pt-14 sm:pt-20 lg:grid-cols-[1.05fr_1fr]">
           <div>
             <p className="rise toon-tag -rotate-2 !px-4 !py-1.5 !text-sm">
               <span className="inline-flex items-center gap-2">
@@ -151,13 +151,13 @@ export default function HomePage() {
 
       <section
         aria-label="Valores"
-        className="overflow-hidden border-b-[3px] border-outline bg-brand py-4 text-outline"
+        className="overflow-hidden border-b-[3px] border-outline bg-brand py-2 text-outline"
       >
-        <div className="flex w-max animate-marquee gap-10 whitespace-nowrap font-display text-2xl font-semibold hover:[animation-play-state:paused]">
+        <div className="flex w-max animate-marquee gap-8 whitespace-nowrap font-display text-lg font-semibold hover:[animation-play-state:paused]">
           {[...marquee, ...marquee, ...marquee, ...marquee].map((word, i) => (
-            <span key={i} className="flex items-center gap-10">
+            <span key={i} className="flex items-center gap-8">
               {word}
-              <Star className="h-6 w-6 text-bg" />
+              <Star className="h-5 w-5 text-bg" />
             </span>
           ))}
         </div>
@@ -165,7 +165,7 @@ export default function HomePage() {
 
       <section
         aria-label="Instituto em números"
-        className="mx-auto max-w-6xl px-5 py-20"
+        className="mx-auto max-w-6xl px-5 py-14"
       >
         <dl className="grid gap-6 sm:grid-cols-3">
           {facts.map((f, i) => (

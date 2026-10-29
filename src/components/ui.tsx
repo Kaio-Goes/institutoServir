@@ -134,7 +134,7 @@ export function PageHero({
         style={{ "--r": "-8deg" } as React.CSSProperties}
       />
       <Sparkle className="absolute left-[46%] top-12 h-6 w-6 animate-twinkle text-sky-soft" />
-      <div className="relative mx-auto max-w-6xl px-5 pb-24 pt-16 sm:pt-24">
+      <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 sm:pt-24">
         <span className="rise toon-tag -rotate-2">{eyebrow}</span>
         <h1 className="rise-2 mt-5 max-w-3xl font-display text-4xl font-semibold leading-tight sm:text-6xl">
           <span className="gradient-text">{title}</span>
