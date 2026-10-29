@@ -12,6 +12,22 @@ export const metadata: Metadata = {
 
 type Doc = { label: string; href: string };
 
+const mulheresDocs: Doc[] = [
+  {
+    label: "Proposta e Plano de Trabalho aprovado",
+    href: "/docs/proposta-plano-de-trabalho-aprovada.pdf",
+  },
+];
+
+const mulheresCursos = [
+  "Design de Sobrancelhas e Lash Lifting",
+  "Manicure e Nail Designer",
+  "Maquiagem Profissional",
+  "Massoterapia e Depilação Profissional",
+  "Pilates Solo e Ergonomia Postural",
+  "Educação financeira e empreendedorismo",
+];
+
 const rodaDocs: Doc[] = [
   {
     label: "Roda de Conversa – documento assinado",
@@ -80,6 +96,67 @@ export default function TransparenciaPage() {
       </PageHero>
 
       <div id="projetos" className="mx-auto max-w-5xl space-y-12 px-5 py-20">
+        <Reveal>
+          <article className="toon-frame p-8 sm:p-10">
+            <span className="toon-tag -rotate-2">
+              Ministério das Mulheres · Termo de Fomento 2026
+            </span>
+            <h2 className="mt-4 font-display text-3xl font-semibold text-ink sm:text-4xl">
+              Qualificação Profissional de Mulheres
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-muted">
+              Cursos gratuitos de qualificação profissional, formação
+              empreendedora e educação financeira para 150 mulheres em situação
+              de vulnerabilidade, visando à autonomia econômica, à inclusão
+              produtiva e à geração de renda. Durante as atividades, um Espaço
+              Kids acolhe os filhos das participantes.
+            </p>
+            <dl className="mt-6 grid gap-3 sm:grid-cols-2">
+              <Fact
+                label="Beneficiário"
+                value={`Instituto Servir · CNPJ ${site.cnpj}`}
+              />
+              <Fact
+                label="Valor de repasse e valor global"
+                value="R$ 150.000,00 (sem contrapartida)"
+              />
+              <Fact
+                label="Vigência"
+                value="3 meses (1 de preparação + 2 de execução dos cursos)"
+              />
+              <Fact
+                label="Órgão responsável"
+                value="65000 · Ministério das Mulheres"
+              />
+              <Fact label="Programa" value="650002026000" />
+              <Fact label="Nº da proposta" value="031246/2026" />
+              <Fact
+                label="Público-alvo"
+                value="150 mulheres residentes no Distrito Federal"
+              />
+              <Fact
+                label="Local de execução"
+                value="Sobradinho II e Fercal – DF"
+              />
+            </dl>
+            <h3 className="mt-8 font-display text-2xl font-semibold text-ink">
+              Cursos e oficinas
+            </h3>
+            <p className="mt-2 text-muted">
+              120 horas de formação prática por turma, mais 16 horas de oficinas
+              de gestão.
+            </p>
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {mulheresCursos.map((c) => (
+                <li key={c} className="toon-tag">
+                  {c}
+                </li>
+              ))}
+            </ul>
+            <Docs docs={mulheresDocs} />
+          </article>
+        </Reveal>
+
         <Reveal>
           <article className="toon-frame p-8 sm:p-10">
             <span className="toon-tag -rotate-2">

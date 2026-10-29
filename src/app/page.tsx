@@ -23,7 +23,7 @@ import { whatsappLink } from "@/lib/site";
 const facts = [
   { value: 60, label: "mulheres atendidas na Roda de Conversa" },
   { value: projects.length, label: "projetos e ações sociais" },
-  { value: 5, label: "documentos oficiais abertos ao público" },
+  { value: 6, label: "documentos oficiais abertos ao público" },
 ];
 
 const marquee = [
