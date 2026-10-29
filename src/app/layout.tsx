@@ -34,6 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="pt-BR"
       data-scroll-behavior="smooth"
+      suppressHydrationWarning
       className={`${nunito.variable} ${fredoka.variable} antialiased`}
     >
       <body className="flex min-h-screen flex-col">
