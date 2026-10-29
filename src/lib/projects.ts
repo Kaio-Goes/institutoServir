@@ -44,7 +44,10 @@ export const projects: Project[] = [
     image: "/fotos/oracao-hospital-1.jpeg",
     imageAlt: "Voluntários orando com pacientes em hospital",
     gallery: [
-      { src: "/fotos/oracao-hospital-2.jpeg", alt: "Visita à ala de pediatria" },
+      {
+        src: "/fotos/oracao-hospital-2.jpeg",
+        alt: "Visita à ala de pediatria",
+      },
       { src: "/fotos/oracao-hospital-3.jpeg", alt: "Visita em hospital" },
     ],
   },
@@ -80,14 +83,23 @@ export const projects: Project[] = [
     summary:
       "Ação especial do instituto para as crianças das comunidades que atendemos, com equipe, voluntários e muito carinho.",
     image: "/fotos/equipe-2.jpg",
-    imageAlt: "Equipe do Instituto Servir com crianças em ação do Dia das Crianças",
-    gallery: [{ src: "/fotos/doces.jpeg", alt: "Entrega de doces às crianças" }],
+    imageAlt:
+      "Equipe do Instituto Servir com crianças em ação do Dia das Crianças",
+    gallery: [
+      { src: "/fotos/doces.jpeg", alt: "Entrega de doces às crianças" },
+    ],
   },
 ];
 
 export const galleryPhotos = [
-  { src: "/fotos/equipe-2.jpg", alt: "Equipe e comunidade reunidas em ação do instituto" },
-  { src: "/fotos/roda-de-conversa-1.png", alt: "Roda de conversa com mulheres" },
+  {
+    src: "/fotos/equipe-2.jpg",
+    alt: "Equipe e comunidade reunidas em ação do instituto",
+  },
+  {
+    src: "/fotos/roda-de-conversa-1.png",
+    alt: "Roda de conversa com mulheres",
+  },
   { src: "/fotos/sopa-entrega-1.jpeg", alt: "Entrega de sopa" },
   { src: "/fotos/oracao-hospital-1.jpeg", alt: "Oração em hospital" },
   { src: "/fotos/peca-teatral.jpeg", alt: "Peça teatral" },

@@ -10,42 +10,83 @@ export const metadata: Metadata = {
 };
 
 const values = [
-  { title: "Solidariedade", text: "Acreditamos na força do apoio mútuo e no cuidado com o próximo." },
-  { title: "Respeito", text: "Valorizamos a diversidade e tratamos cada pessoa com dignidade." },
-  { title: "Comprometimento", text: "Atuamos com responsabilidade e dedicação em todos os nossos projetos." },
-  { title: "Inclusão", text: "Trabalhamos para que todos tenham acesso às mesmas oportunidades." },
-  { title: "Transparência", text: "Mantemos uma atuação ética, clara e aberta com parceiros e beneficiários." },
-  { title: "Amor ao próximo", text: "Todas as nossas ações são guiadas pelo desejo sincero de fazer o bem." },
+  {
+    title: "Solidariedade",
+    text: "Acreditamos na força do apoio mútuo e no cuidado com o próximo.",
+  },
+  {
+    title: "Respeito",
+    text: "Valorizamos a diversidade e tratamos cada pessoa com dignidade.",
+  },
+  {
+    title: "Comprometimento",
+    text: "Atuamos com responsabilidade e dedicação em todos os nossos projetos.",
+  },
+  {
+    title: "Inclusão",
+    text: "Trabalhamos para que todos tenham acesso às mesmas oportunidades.",
+  },
+  {
+    title: "Transparência",
+    text: "Mantemos uma atuação ética, clara e aberta com parceiros e beneficiários.",
+  },
+  {
+    title: "Amor ao próximo",
+    text: "Todas as nossas ações são guiadas pelo desejo sincero de fazer o bem.",
+  },
 ];
 
-const fronts = ["Educação", "Cultura", "Acolhimento", "Apoio à infância", "Combate à fome"];
+const fronts = [
+  "Educação",
+  "Cultura",
+  "Acolhimento",
+  "Apoio à infância",
+  "Combate à fome",
+];
 
 export default function QuemSomosPage() {
   return (
     <>
-      <PageHero eyebrow="Quem somos" title="Mais do que ajudar, nós caminhamos juntos.">
-        O Instituto Servir é uma organização sem fins lucrativos dedicada ao bem-estar social e ao desenvolvimento
-        humano em Sobradinho II e em outras regiões do Distrito Federal.
+      <PageHero
+        eyebrow="Quem somos"
+        title="Mais do que ajudar, nós caminhamos juntos."
+      >
+        O Instituto Servir é uma organização sem fins lucrativos dedicada ao
+        bem-estar social e ao desenvolvimento humano em Sobradinho II e em
+        outras regiões do Distrito Federal.
       </PageHero>
 
       <section className="mx-auto grid max-w-6xl items-center gap-14 px-5 py-20 lg:grid-cols-2">
-        <Reveal from="left" className="space-y-5 text-lg leading-relaxed text-muted">
-          <h2 className="font-display text-4xl font-semibold text-ink">Nossa história</h2>
+        <Reveal
+          from="left"
+          className="space-y-5 text-lg leading-relaxed text-muted"
+        >
+          <h2 className="font-display text-4xl font-semibold text-ink">
+            Nossa história
+          </h2>
           <p>
-            Acreditamos que é possível transformar vidas oferecendo oportunidades reais. Por isso, atuamos em diversas
-            frentes e buscamos fortalecer vínculos, despertar talentos e garantir dignidade a quem mais precisa.
+            Acreditamos que é possível transformar vidas oferecendo
+            oportunidades reais. Por isso, atuamos em diversas frentes e
+            buscamos fortalecer vínculos, despertar talentos e garantir
+            dignidade a quem mais precisa.
           </p>
           <p>
-            Atendemos crianças, jovens, adultos, idosos e famílias inteiras, sempre com um olhar atento às
-            necessidades de cada um. Nosso compromisso é construir pontes para um futuro mais justo.
+            Atendemos crianças, jovens, adultos, idosos e famílias inteiras,
+            sempre com um olhar atento às necessidades de cada um. Nosso
+            compromisso é construir pontes para um futuro mais justo.
           </p>
           <p>
-            Com o engajamento da comunidade, o apoio de voluntários e a solidariedade de parceiros, o instituto cresce
-            e impacta vidas com transparência, amor e dedicação. Somos movidos pela fé na transformação.
+            Com o engajamento da comunidade, o apoio de voluntários e a
+            solidariedade de parceiros, o instituto cresce e impacta vidas com
+            transparência, amor e dedicação. Somos movidos pela fé na
+            transformação.
           </p>
           <ul className="flex flex-wrap gap-2 pt-2">
             {fronts.map((f) => (
-              <li key={f} className="toon-tag transition-transform hover:-rotate-3 hover:scale-110">
+              <li
+                key={f}
+                className="toon-tag transition-transform hover:-rotate-3 hover:scale-110"
+              >
                 {f}
               </li>
             ))}
@@ -65,20 +106,26 @@ export default function QuemSomosPage() {
         <div className="mx-auto grid max-w-6xl gap-8 px-5 md:grid-cols-2">
           <Reveal>
             <article className="toon-card h-full p-9">
-              <h2 className="font-display text-3xl font-semibold text-brand">Missão</h2>
+              <h2 className="font-display text-3xl font-semibold text-brand">
+                Missão
+              </h2>
               <p className="mt-4 text-lg leading-relaxed text-muted">
-                Promover o desenvolvimento humano e social por meio de ações que levem educação, cultura, acolhimento
-                e solidariedade à comunidade, oferecendo oportunidades reais, especialmente às pessoas em situação de
-                vulnerabilidade.
+                Promover o desenvolvimento humano e social por meio de ações que
+                levem educação, cultura, acolhimento e solidariedade à
+                comunidade, oferecendo oportunidades reais, especialmente às
+                pessoas em situação de vulnerabilidade.
               </p>
             </article>
           </Reveal>
           <Reveal delay={140}>
             <article className="toon-card h-full p-9">
-              <h2 className="font-display text-3xl font-semibold text-brand">Visão</h2>
+              <h2 className="font-display text-3xl font-semibold text-brand">
+                Visão
+              </h2>
               <p className="mt-4 text-lg leading-relaxed text-muted">
-                Ser reconhecido como um catalisador de transformação social, referência na inclusão de crianças,
-                jovens, famílias e idosos, por meio de programas que transformem vidas e fortaleçam laços
+                Ser reconhecido como um catalisador de transformação social,
+                referência na inclusão de crianças, jovens, famílias e idosos,
+                por meio de programas que transformem vidas e fortaleçam laços
                 comunitários.
               </p>
             </article>
@@ -87,7 +134,11 @@ export default function QuemSomosPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-24">
-        <SectionHeading eyebrow="Valores" title="O que guia cada ação" align="center" />
+        <SectionHeading
+          eyebrow="Valores"
+          title="O que guia cada ação"
+          align="center"
+        />
         <ul className="mt-14 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((v, i) => (
             <li key={v.title}>
@@ -96,7 +147,9 @@ export default function QuemSomosPage() {
                   <span className="flex h-12 w-12 items-center justify-center rounded-xl border-[3px] border-outline bg-brand text-outline transition-transform group-hover:-rotate-12 group-hover:scale-110">
                     <Icon name="heart" className="h-6 w-6" />
                   </span>
-                  <h3 className="mt-5 font-display text-2xl font-semibold text-ink">{v.title}</h3>
+                  <h3 className="mt-5 font-display text-2xl font-semibold text-ink">
+                    {v.title}
+                  </h3>
                   <p className="mt-2 leading-relaxed text-muted">{v.text}</p>
                 </div>
               </Reveal>

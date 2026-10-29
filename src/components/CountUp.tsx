@@ -2,14 +2,22 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export function CountUp({ to, duration = 1400 }: { to: number; duration?: number }) {
+export function CountUp({
+  to,
+  duration = 1400,
+}: {
+  to: number;
+  duration?: number;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
   const [value, setValue] = useState(0);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (reduce) {
       const id = requestAnimationFrame(() => setValue(to));
       return () => cancelAnimationFrame(id);

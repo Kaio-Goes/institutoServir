@@ -25,7 +25,11 @@ const paths: Record<IconName, React.ReactNode> = {
   whatsapp: (
     <>
       <path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 8 19.5L3 21z" />
-      <path d="M9 9c0 3 3 6 6 6l1.2-1.4-2-1-1 .6c-.8-.4-1.6-1.2-2-2l.6-1-1-2L9 9z" fill="currentColor" stroke="none" />
+      <path
+        d="M9 9c0 3 3 6 6 6l1.2-1.4-2-1-1 .6c-.8-.4-1.6-1.2-2-2l.6-1-1-2L9 9z"
+        fill="currentColor"
+        stroke="none"
+      />
     </>
   ),
   mail: (
@@ -40,8 +44,12 @@ const paths: Record<IconName, React.ReactNode> = {
       <circle cx="12" cy="10" r="2.5" />
     </>
   ),
-  phone: <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />,
-  heart: <path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z" />,
+  phone: (
+    <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+  ),
+  heart: (
+    <path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z" />
+  ),
   arrow: <path d="M5 12h14M13 6l6 6-6 6" />,
   copy: (
     <>

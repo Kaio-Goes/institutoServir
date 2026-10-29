@@ -1,10 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CountUp } from "@/components/CountUp";
-import { Cloud, Heart, Sparkle, Squiggle, Star, Wave } from "@/components/Decor";
+import {
+  Cloud,
+  Heart,
+  Sparkle,
+  Squiggle,
+  Star,
+  Wave,
+} from "@/components/Decor";
 import { Icon } from "@/components/Icon";
 import { Reveal } from "@/components/Reveal";
-import { ButtonLink, Photo, ProjectCard, SectionHeading } from "@/components/ui";
+import {
+  ButtonLink,
+  Photo,
+  ProjectCard,
+  SectionHeading,
+} from "@/components/ui";
 import { galleryPhotos, projects } from "@/lib/projects";
 import { whatsappLink } from "@/lib/site";
 
@@ -54,8 +66,14 @@ export default function HomePage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <div className="absolute -left-32 top-10 h-96 w-96 animate-blob bg-brand/15 blur-3xl" aria-hidden="true" />
-        <div className="absolute -right-24 bottom-0 h-96 w-96 animate-blob bg-pop/25 blur-3xl" aria-hidden="true" />
+        <div
+          className="absolute -left-32 top-10 h-96 w-96 animate-blob bg-brand/15 blur-3xl"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute -right-24 bottom-0 h-96 w-96 animate-blob bg-pop/25 blur-3xl"
+          aria-hidden="true"
+        />
 
         <Cloud className="absolute left-[6%] top-16 hidden h-14 w-24 animate-float-slow text-surface-2 sm:block" />
         <Cloud className="absolute right-[40%] top-8 hidden h-10 w-16 animate-float text-surface-2 md:block" />
@@ -79,8 +97,9 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="rise-3 mt-8 max-w-xl text-lg leading-relaxed text-muted">
-              O Instituto Servir transforma vidas por meio do acolhimento, da capacitação e da educação, apoiando
-              famílias em situação de vulnerabilidade com amor e dignidade.
+              O Instituto Servir transforma vidas por meio do acolhimento, da
+              capacitação e da educação, apoiando famílias em situação de
+              vulnerabilidade com amor e dignidade.
             </p>
             <div className="rise-3 mt-9 flex flex-wrap gap-4">
               <ButtonLink href="/doacao">
@@ -115,10 +134,14 @@ export default function HomePage() {
               />
             </div>
             <div className="absolute -right-3 -top-7 flex h-28 w-28 animate-wiggle flex-col items-center justify-center rounded-full border-[3px] border-outline bg-brand text-center text-outline shadow-[4px_4px_0_var(--color-pop)]">
-              <span className="font-display text-4xl font-semibold leading-none">60</span>
-              <span className="mt-1 text-[11px] font-extrabold leading-tight">mulheres
+              <span className="font-display text-4xl font-semibold leading-none">
+                60
+              </span>
+              <span className="mt-1 text-[11px] font-extrabold leading-tight">
+                mulheres
                 <br />
-                atendidas</span>
+                atendidas
+              </span>
             </div>
             <Heart className="absolute -bottom-6 right-10 h-12 w-12 animate-float-slow text-brand-deep" />
           </div>
@@ -126,7 +149,10 @@ export default function HomePage() {
         <Wave className="absolute bottom-[-1px] left-0 text-brand" />
       </section>
 
-      <section aria-label="Valores" className="overflow-hidden border-b-[3px] border-outline bg-brand py-4 text-outline">
+      <section
+        aria-label="Valores"
+        className="overflow-hidden border-b-[3px] border-outline bg-brand py-4 text-outline"
+      >
         <div className="flex w-max animate-marquee gap-10 whitespace-nowrap font-display text-2xl font-semibold hover:[animation-play-state:paused]">
           {[...marquee, ...marquee, ...marquee, ...marquee].map((word, i) => (
             <span key={i} className="flex items-center gap-10">
@@ -137,7 +163,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-label="Instituto em números" className="mx-auto max-w-6xl px-5 py-20">
+      <section
+        aria-label="Instituto em números"
+        className="mx-auto max-w-6xl px-5 py-20"
+      >
         <dl className="grid gap-6 sm:grid-cols-3">
           {facts.map((f, i) => (
             <Reveal key={f.label} delay={i * 120}>
@@ -165,22 +194,28 @@ export default function HomePage() {
           </div>
         </Reveal>
         <div>
-          <SectionHeading eyebrow="Quem somos" title="Uma ponte entre necessidades e soluções">
-            O Instituto Servir nasceu com um propósito claro: ser instrumento de amor ao próximo, cuidado e esperança.
-            Somos uma organização sem fins lucrativos que leva educação, cultura, alimentação, apoio emocional e
-            assistência comunitária a quem mais precisa.
+          <SectionHeading
+            eyebrow="Quem somos"
+            title="Uma ponte entre necessidades e soluções"
+          >
+            O Instituto Servir nasceu com um propósito claro: ser instrumento de
+            amor ao próximo, cuidado e esperança. Somos uma organização sem fins
+            lucrativos que leva educação, cultura, alimentação, apoio emocional
+            e assistência comunitária a quem mais precisa.
           </SectionHeading>
           <Reveal delay={150}>
             <ul className="mt-6 flex flex-wrap gap-3">
-              {["Solidariedade", "Respeito", "Inclusão", "Transparência"].map((v) => (
-                <li
-                  key={v}
-                  className="flex items-center gap-2 rounded-full border-2 border-line bg-surface px-4 py-2 font-display font-medium text-ink transition-transform hover:-rotate-3 hover:scale-105"
-                >
-                  <Icon name="check" className="h-4 w-4 text-brand" />
-                  {v}
-                </li>
-              ))}
+              {["Solidariedade", "Respeito", "Inclusão", "Transparência"].map(
+                (v) => (
+                  <li
+                    key={v}
+                    className="flex items-center gap-2 rounded-full border-2 border-line bg-surface px-4 py-2 font-display font-medium text-ink transition-transform hover:-rotate-3 hover:scale-105"
+                  >
+                    <Icon name="check" className="h-4 w-4 text-brand" />
+                    {v}
+                  </li>
+                ),
+              )}
             </ul>
             <ButtonLink href="/quem-somos" variant="ghost" className="mt-8">
               Nossa história e valores
@@ -192,8 +227,12 @@ export default function HomePage() {
       <section className="relative bg-bg-2 py-24">
         <Wave className="absolute left-0 top-[-1px] text-bg" flip />
         <div className="mx-auto max-w-6xl px-5">
-          <SectionHeading eyebrow="Projetos sociais" title="Arte, alimento, saúde e educação para todas as idades">
-            Cada ação nasce da escuta da comunidade e chega onde a necessidade é maior.
+          <SectionHeading
+            eyebrow="Projetos sociais"
+            title="Arte, alimento, saúde e educação para todas as idades"
+          >
+            Cada ação nasce da escuta da comunidade e chega onde a necessidade é
+            maior.
           </SectionHeading>
           <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((p, i) => (
@@ -210,8 +249,13 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-24">
-        <SectionHeading eyebrow="Como ajudar" title="Cada gesto é uma semente de esperança" align="center">
-          Você pode fazer parte de várias formas. Escolha a que cabe na sua vida.
+        <SectionHeading
+          eyebrow="Como ajudar"
+          title="Cada gesto é uma semente de esperança"
+          align="center"
+        >
+          Você pode fazer parte de várias formas. Escolha a que cabe na sua
+          vida.
         </SectionHeading>
         <div className="mt-14 grid gap-8 md:grid-cols-3">
           {ways.map((w, i) => (
@@ -220,7 +264,9 @@ export default function HomePage() {
                 <span className="flex h-16 w-16 items-center justify-center rounded-2xl border-[3px] border-outline bg-brand text-outline transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-110">
                   <Icon name={w.icon} className="h-8 w-8" />
                 </span>
-                <h3 className="mt-6 font-display text-2xl font-semibold text-ink">{w.title}</h3>
+                <h3 className="mt-6 font-display text-2xl font-semibold text-ink">
+                  {w.title}
+                </h3>
                 <p className="mt-3 leading-relaxed text-muted">{w.text}</p>
                 {w.external ? (
                   <a
@@ -250,7 +296,10 @@ export default function HomePage() {
       <section className="relative bg-bg-2 py-24">
         <Wave className="absolute left-0 top-[-1px] text-bg" flip />
         <div className="mx-auto max-w-6xl px-5">
-          <SectionHeading eyebrow="Galeria" title="Momentos que mostram o nosso trabalho" />
+          <SectionHeading
+            eyebrow="Galeria"
+            title="Momentos que mostram o nosso trabalho"
+          />
           <div className="mt-14 grid auto-rows-[170px] grid-cols-2 gap-5 sm:auto-rows-[210px] md:grid-cols-4">
             {galleryPhotos.map((photo, i) => (
               <Reveal
@@ -261,7 +310,11 @@ export default function HomePage() {
                 <Photo
                   src={photo.src}
                   alt={photo.alt}
-                  sizes={i === 0 ? "(min-width: 768px) 50vw, 100vw" : "(min-width: 768px) 25vw, 50vw"}
+                  sizes={
+                    i === 0
+                      ? "(min-width: 768px) 50vw, 100vw"
+                      : "(min-width: 768px) 25vw, 50vw"
+                  }
                   className={`h-full !shadow-[5px_5px_0_var(--color-pop)] ${
                     i % 2 === 0 ? "rotate-1" : "-rotate-1"
                   } hover:scale-[1.03]`}
@@ -276,10 +329,12 @@ export default function HomePage() {
         <Reveal from="left">
           <div className="relative h-full overflow-hidden rounded-3xl border-[3px] border-outline bg-brand p-10 text-outline shadow-[8px_8px_0_var(--color-pop)]">
             <Sparkle className="absolute right-6 top-6 h-10 w-10 animate-twinkle text-white" />
-            <h2 className="font-display text-3xl font-semibold sm:text-4xl">Transparência é um compromisso</h2>
+            <h2 className="font-display text-3xl font-semibold sm:text-4xl">
+              Transparência é um compromisso
+            </h2>
             <p className="mt-4 text-lg font-semibold leading-relaxed">
-              Publicamos termos de fomento, planilhas de custos e projetos técnicos para que você acompanhe como cada
-              recurso é aplicado.
+              Publicamos termos de fomento, planilhas de custos e projetos
+              técnicos para que você acompanhe como cada recurso é aplicado.
             </p>
             <ButtonLink href="/transparencia" variant="light" className="mt-8">
               Ver prestação de contas
@@ -288,12 +343,18 @@ export default function HomePage() {
         </Reveal>
         <Reveal from="right">
           <div className="toon-frame h-full p-10">
-            <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">Vamos conversar?</h2>
+            <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
+              Vamos conversar?
+            </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted">
-              Quer ajudar, receber apoio ou conhecer o instituto? Fale com a nossa equipe, respondemos com carinho.
+              Quer ajudar, receber apoio ou conhecer o instituto? Fale com a
+              nossa equipe, respondemos com carinho.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <ButtonLink href={whatsappLink("Olá! Vim pelo site do Instituto Servir.")} external>
+              <ButtonLink
+                href={whatsappLink("Olá! Vim pelo site do Instituto Servir.")}
+                external
+              >
                 <Icon name="whatsapp" className="h-5 w-5" />
                 WhatsApp
               </ButtonLink>

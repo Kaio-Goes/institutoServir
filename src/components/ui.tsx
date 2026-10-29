@@ -20,11 +20,22 @@ const variants = {
   light: "toon-btn toon-btn-light",
 };
 
-export function ButtonLink({ href, children, variant = "primary", external, className = "" }: ButtonProps) {
+export function ButtonLink({
+  href,
+  children,
+  variant = "primary",
+  external,
+  className = "",
+}: ButtonProps) {
   const classes = `${variants[variant]} ${className}`;
   if (external) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes}
+      >
         {children}
       </a>
     );
@@ -48,10 +59,18 @@ export function SectionHeading({
   align?: "left" | "center";
 }) {
   return (
-    <Reveal className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
+    <Reveal
+      className={
+        align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"
+      }
+    >
       <span className="toon-tag -rotate-2">{eyebrow}</span>
-      <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-ink sm:text-5xl">{title}</h2>
-      {children && <p className="mt-4 text-lg leading-relaxed text-muted">{children}</p>}
+      <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-ink sm:text-5xl">
+        {title}
+      </h2>
+      {children && (
+        <p className="mt-4 text-lg leading-relaxed text-muted">{children}</p>
+      )}
     </Reveal>
   );
 }
@@ -74,20 +93,34 @@ export function Photo({
   priority?: boolean;
 }) {
   return (
-    <div className={`toon-frame relative transition-transform duration-300 hover:rotate-0 ${tilt} ${className}`}>
+    <div
+      className={`toon-frame relative transition-transform duration-300 hover:rotate-0 ${tilt} ${className}`}
+    >
       <Image
         src={src}
         alt={alt}
         fill
         sizes={sizes}
-        {...(priority ? { loading: "eager" as const, fetchPriority: "high" as const } : {})}
-        className={fit === "contain" ? "bg-white object-contain" : "object-cover"}
+        {...(priority
+          ? { loading: "eager" as const, fetchPriority: "high" as const }
+          : {})}
+        className={
+          fit === "contain" ? "bg-white object-contain" : "object-cover"
+        }
       />
     </div>
   );
 }
 
-export function PageHero({ eyebrow, title, children }: { eyebrow: string; title: string; children?: ReactNode }) {
+export function PageHero({
+  eyebrow,
+  title,
+  children,
+}: {
+  eyebrow: string;
+  title: string;
+  children?: ReactNode;
+}) {
   return (
     <section className="relative overflow-hidden bg-bg-2">
       <div
@@ -106,14 +139,24 @@ export function PageHero({ eyebrow, title, children }: { eyebrow: string; title:
         <h1 className="rise-2 mt-5 max-w-3xl font-display text-4xl font-semibold leading-tight sm:text-6xl">
           <span className="gradient-text">{title}</span>
         </h1>
-        {children && <p className="rise-3 mt-5 max-w-2xl text-lg leading-relaxed text-muted">{children}</p>}
+        {children && (
+          <p className="rise-3 mt-5 max-w-2xl text-lg leading-relaxed text-muted">
+            {children}
+          </p>
+        )}
       </div>
       <Wave className="absolute bottom-[-1px] left-0 text-bg" />
     </section>
   );
 }
 
-export function ProjectCard({ project, index = 0 }: { project: Project; index?: number }) {
+export function ProjectCard({
+  project,
+  index = 0,
+}: {
+  project: Project;
+  index?: number;
+}) {
   return (
     <Reveal delay={(index % 3) * 120} className="h-full">
       <article className="toon-card group flex h-full flex-col overflow-hidden">
@@ -124,14 +167,22 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
             fill
             sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"
             className={`transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1 ${
-              project.fit === "contain" ? "bg-white object-contain" : "object-cover"
+              project.fit === "contain"
+                ? "bg-white object-contain"
+                : "object-cover"
             }`}
           />
-          <span className="toon-tag absolute left-4 top-4 -rotate-3">{project.tag}</span>
+          <span className="toon-tag absolute left-4 top-4 -rotate-3">
+            {project.tag}
+          </span>
         </div>
         <div className="flex flex-1 flex-col p-6">
-          <h3 className="font-display text-2xl font-semibold text-ink">{project.title}</h3>
-          <p className="mt-3 flex-1 leading-relaxed text-muted">{project.summary}</p>
+          <h3 className="font-display text-2xl font-semibold text-ink">
+            {project.title}
+          </h3>
+          <p className="mt-3 flex-1 leading-relaxed text-muted">
+            {project.summary}
+          </p>
           <Link
             href={`/projetos#${project.slug}`}
             className="mt-5 inline-flex items-center gap-2 font-display text-lg font-semibold text-brand transition-all hover:gap-4"

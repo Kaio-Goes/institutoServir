@@ -16,9 +16,15 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-3">
         <Logo />
 
-        <nav aria-label="Principal" className="hidden items-center gap-1 lg:flex">
+        <nav
+          aria-label="Principal"
+          className="hidden items-center gap-1 lg:flex"
+        >
           {nav.map((item) => {
-            const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+            const active =
+              item.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(item.href);
             return (
               <Link
                 key={item.href}
@@ -37,7 +43,10 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link href="/doacao" className="toon-btn toon-btn-primary hidden !px-5 !py-2 sm:inline-flex">
+          <Link
+            href="/doacao"
+            className="toon-btn toon-btn-primary hidden !px-5 !py-2 sm:inline-flex"
+          >
             <Icon name="heart" className="h-4 w-4" />
             Doe agora
           </Link>
@@ -73,7 +82,11 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <Link href="/doacao" onClick={() => setOpen(false)} className="toon-btn toon-btn-primary mt-5 w-full">
+          <Link
+            href="/doacao"
+            onClick={() => setOpen(false)}
+            className="toon-btn toon-btn-primary mt-5 w-full"
+          >
             <Icon name="heart" className="h-5 w-5" />
             Doe agora
           </Link>

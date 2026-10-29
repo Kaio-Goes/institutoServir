@@ -4,7 +4,12 @@ import { useState } from "react";
 import { Icon } from "@/components/Icon";
 import { whatsappLink } from "@/lib/site";
 
-const subjects = ["Quero ser voluntário(a)", "Quero fazer uma doação", "Parceria ou apoio institucional", "Outro assunto"];
+const subjects = [
+  "Quero ser voluntário(a)",
+  "Quero fazer uma doação",
+  "Parceria ou apoio institucional",
+  "Outro assunto",
+];
 
 const field =
   "mt-2 w-full rounded-xl border-[3px] border-outline bg-bg-2 px-4 py-3 text-ink placeholder:text-muted/60 focus:border-brand focus:outline-none";
@@ -31,26 +36,55 @@ export function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="space-y-5" noValidate>
       <div>
-        <label htmlFor="name" className="font-display text-lg font-medium text-ink">
+        <label
+          htmlFor="name"
+          className="font-display text-lg font-medium text-ink"
+        >
           Seu nome
         </label>
-        <input id="name" name="name" type="text" autoComplete="name" required className={field} placeholder="Como podemos te chamar?" />
+        <input
+          id="name"
+          name="name"
+          type="text"
+          autoComplete="name"
+          required
+          className={field}
+          placeholder="Como podemos te chamar?"
+        />
       </div>
       <div>
-        <label htmlFor="subject" className="font-display text-lg font-medium text-ink">
+        <label
+          htmlFor="subject"
+          className="font-display text-lg font-medium text-ink"
+        >
           Assunto
         </label>
-        <select id="subject" name="subject" className={field} defaultValue={subjects[0]}>
+        <select
+          id="subject"
+          name="subject"
+          className={field}
+          defaultValue={subjects[0]}
+        >
           {subjects.map((s) => (
             <option key={s}>{s}</option>
           ))}
         </select>
       </div>
       <div>
-        <label htmlFor="message" className="font-display text-lg font-medium text-ink">
+        <label
+          htmlFor="message"
+          className="font-display text-lg font-medium text-ink"
+        >
           Mensagem
         </label>
-        <textarea id="message" name="message" rows={5} required className={field} placeholder="Escreva aqui sua mensagem" />
+        <textarea
+          id="message"
+          name="message"
+          rows={5}
+          required
+          className={field}
+          placeholder="Escreva aqui sua mensagem"
+        />
       </div>
       {error && (
         <p role="alert" className="font-bold text-sky-soft">
@@ -61,7 +95,9 @@ export function ContactForm() {
         <Icon name="whatsapp" className="h-5 w-5" />
         Enviar pelo WhatsApp
       </button>
-      <p className="text-sm text-muted">Ao enviar, abriremos o WhatsApp com a sua mensagem já preenchida.</p>
+      <p className="text-sm text-muted">
+        Ao enviar, abriremos o WhatsApp com a sua mensagem já preenchida.
+      </p>
     </form>
   );
 }

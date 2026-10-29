@@ -13,32 +13,53 @@ export const metadata: Metadata = {
 };
 
 const uses = [
-  { title: "Sopa e cestas básicas", text: "Alimento e cuidado para famílias e pessoas em situação de rua." },
-  { title: "Aulas e oficinas", text: "Materiais e estrutura para arte, ensino e capacitação." },
-  { title: "Acolhimento", text: "Apoio emocional, psicológico e jurídico às mulheres atendidas." },
-  { title: "Eventos comunitários", text: "Cultura, música e ações para crianças e idosos." },
+  {
+    title: "Sopa e cestas básicas",
+    text: "Alimento e cuidado para famílias e pessoas em situação de rua.",
+  },
+  {
+    title: "Aulas e oficinas",
+    text: "Materiais e estrutura para arte, ensino e capacitação.",
+  },
+  {
+    title: "Acolhimento",
+    text: "Apoio emocional, psicológico e jurídico às mulheres atendidas.",
+  },
+  {
+    title: "Eventos comunitários",
+    text: "Cultura, música e ações para crianças e idosos.",
+  },
 ];
 
 export default function DoacaoPage() {
   return (
     <>
-      <PageHero eyebrow="Faça sua doação" title="Cada doação é uma semente de esperança">
-        Sua contribuição chega rápido e sem burocracia, direto na conta do instituto, via PIX.
+      <PageHero
+        eyebrow="Faça sua doação"
+        title="Cada doação é uma semente de esperança"
+      >
+        Sua contribuição chega rápido e sem burocracia, direto na conta do
+        instituto, via PIX.
       </PageHero>
 
       <section className="mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-[1.1fr_1fr]">
         <Reveal from="left">
           <div className="toon-frame p-8 sm:p-10">
-            <h2 className="font-display text-4xl font-semibold text-ink">Doe via PIX</h2>
+            <h2 className="font-display text-4xl font-semibold text-ink">
+              Doe via PIX
+            </h2>
             <p className="mt-3 text-lg leading-relaxed text-muted">
-              Abra o aplicativo do seu banco, escolha PIX com chave e cole a chave abaixo. Qualquer valor faz
-              diferença.
+              Abra o aplicativo do seu banco, escolha PIX com chave e cole a
+              chave abaixo. Qualquer valor faz diferença.
             </p>
             <CopyPix value={site.pixKey} />
             <p className="mt-5 text-sm text-muted">
-              Favorecido: Instituto Servir · CNPJ {site.cnpj}. Quer um comprovante ou doar de outra forma?{" "}
+              Favorecido: Instituto Servir · CNPJ {site.cnpj}. Quer um
+              comprovante ou doar de outra forma?{" "}
               <a
-                href={whatsappLink("Olá! Quero fazer uma doação ao Instituto Servir.")}
+                href={whatsappLink(
+                  "Olá! Quero fazer uma doação ao Instituto Servir.",
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-bold text-brand underline underline-offset-2"
@@ -66,7 +87,9 @@ export default function DoacaoPage() {
 
       <section className="bg-bg-2 py-24">
         <div className="mx-auto max-w-6xl px-5">
-          <h2 className="text-center font-display text-4xl font-semibold text-ink">Para onde vai a sua doação</h2>
+          <h2 className="text-center font-display text-4xl font-semibold text-ink">
+            Para onde vai a sua doação
+          </h2>
           <ul className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
             {uses.map((u, i) => (
               <li key={u.title}>
@@ -75,7 +98,9 @@ export default function DoacaoPage() {
                     <span className="flex h-12 w-12 items-center justify-center rounded-xl border-[3px] border-outline bg-brand text-outline transition-transform group-hover:-rotate-12 group-hover:scale-110">
                       <Icon name="heart" className="h-6 w-6" />
                     </span>
-                    <h3 className="mt-4 font-display text-xl font-semibold text-ink">{u.title}</h3>
+                    <h3 className="mt-4 font-display text-xl font-semibold text-ink">
+                      {u.title}
+                    </h3>
                     <p className="mt-2 leading-relaxed text-muted">{u.text}</p>
                   </div>
                 </Reveal>

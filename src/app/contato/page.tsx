@@ -18,9 +18,24 @@ const channels = [
     value: site.phoneDisplay,
     href: whatsappLink("Olá! Vim pelo site do Instituto Servir."),
   },
-  { icon: "mail" as const, label: "E-mail", value: site.email, href: `mailto:${site.email}` },
-  { icon: "instagram" as const, label: "Instagram", value: "@institutoservirr", href: site.instagram },
-  { icon: "facebook" as const, label: "Facebook", value: "InstitutoServirBSB", href: site.facebook },
+  {
+    icon: "mail" as const,
+    label: "E-mail",
+    value: site.email,
+    href: `mailto:${site.email}`,
+  },
+  {
+    icon: "instagram" as const,
+    label: "Instagram",
+    value: "@institutoservirr",
+    href: site.instagram,
+  },
+  {
+    icon: "facebook" as const,
+    label: "Facebook",
+    value: "InstitutoServirBSB",
+    href: site.facebook,
+  },
 ];
 
 const row =
@@ -32,12 +47,15 @@ export default function ContatoPage() {
   return (
     <>
       <PageHero eyebrow="Contato" title="Vamos transformar vidas juntos?">
-        Quer usar seu tempo, seus talentos e seu coração para ajudar? Fale com a gente e saiba como fazer parte.
+        Quer usar seu tempo, seus talentos e seu coração para ajudar? Fale com a
+        gente e saiba como fazer parte.
       </PageHero>
 
       <section className="mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-[1fr_1.1fr]">
         <Reveal from="left">
-          <h2 className="font-display text-4xl font-semibold text-ink">Onde nos encontrar</h2>
+          <h2 className="font-display text-4xl font-semibold text-ink">
+            Onde nos encontrar
+          </h2>
           <ul className="mt-8 space-y-5">
             {channels.map((c) => (
               <li key={c.label}>
@@ -47,12 +65,18 @@ export default function ContatoPage() {
                   rel="noopener noreferrer"
                   className={`${row} group transition-transform hover:-translate-y-1 hover:rotate-1`}
                 >
-                  <span className={`${bubble} transition-transform group-hover:-rotate-12`}>
+                  <span
+                    className={`${bubble} transition-transform group-hover:-rotate-12`}
+                  >
                     <Icon name={c.icon} className="h-6 w-6" />
                   </span>
                   <span className="min-w-0">
-                    <span className="block text-xs font-extrabold uppercase tracking-wider text-brand">{c.label}</span>
-                    <span className="block break-all font-bold text-ink">{c.value}</span>
+                    <span className="block text-xs font-extrabold uppercase tracking-wider text-brand">
+                      {c.label}
+                    </span>
+                    <span className="block break-all font-bold text-ink">
+                      {c.value}
+                    </span>
                   </span>
                 </a>
               </li>
@@ -62,7 +86,9 @@ export default function ContatoPage() {
                 <Icon name="pin" className="h-6 w-6" />
               </span>
               <span>
-                <span className="block text-xs font-extrabold uppercase tracking-wider text-brand">Endereço</span>
+                <span className="block text-xs font-extrabold uppercase tracking-wider text-brand">
+                  Endereço
+                </span>
                 <span className="block font-bold text-ink">{site.address}</span>
                 <span className="block text-muted">CEP {site.cep}</span>
               </span>
@@ -72,8 +98,12 @@ export default function ContatoPage() {
 
         <Reveal from="right">
           <div id="mensagem" className="toon-frame p-8 sm:p-10">
-            <h2 className="font-display text-4xl font-semibold text-ink">Envie uma mensagem</h2>
-            <p className="mb-7 mt-2 text-muted">Respondemos com carinho assim que possível.</p>
+            <h2 className="font-display text-4xl font-semibold text-ink">
+              Envie uma mensagem
+            </h2>
+            <p className="mb-7 mt-2 text-muted">
+              Respondemos com carinho assim que possível.
+            </p>
             <ContactForm />
           </div>
         </Reveal>
