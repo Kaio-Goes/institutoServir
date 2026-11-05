@@ -14,6 +14,10 @@ type Doc = { label: string; href: string };
 
 const mulheresDocs: Doc[] = [
   {
+    label: "Termo de Fomento nº 7AAHXD/2026 – assinado",
+    href: "/docs/termo-de-fomento-mulheres.pdf",
+  },
+  {
     label: "Proposta e Plano de Trabalho aprovado",
     href: "/docs/proposta-plano-de-trabalho-aprovada.pdf",
   },
@@ -99,7 +103,7 @@ export default function TransparenciaPage() {
         <Reveal>
           <article className="toon-frame p-8 sm:p-10">
             <span className="toon-tag -rotate-2">
-              Ministério das Mulheres · Termo de Fomento 2026
+              Ministério das Mulheres · Termo de Fomento 7AAHXD/2026
             </span>
             <h2 className="mt-4 font-display text-3xl font-semibold text-ink sm:text-4xl">
               Qualificação Profissional de Mulheres
@@ -117,16 +121,33 @@ export default function TransparenciaPage() {
                 value={`Instituto Servir · CNPJ ${site.cnpj}`}
               />
               <Fact
+                label="Situação"
+                value="Aprovado · Termo de Fomento assinado (29/10/2026 e 03/11/2026)"
+              />
+              <Fact
+                label="Termo de Fomento"
+                value="MMulheres – Transferegov.br nº 7AAHXD/2026"
+              />
+              <Fact
                 label="Valor de repasse e valor global"
-                value="R$ 150.000,00 (sem contrapartida)"
+                value="R$ 150.000,00, em parcela única (sem contrapartida)"
               />
               <Fact
                 label="Vigência"
-                value="3 meses (1 de preparação + 2 de execução dos cursos)"
+                value="3 meses a partir da assinatura (1 de preparação + 2 de execução dos cursos)"
               />
               <Fact
                 label="Órgão responsável"
-                value="65000 · Ministério das Mulheres"
+                value="Secretaria Nacional de Autonomia Econômica e Política de Cuidados · Ministério das Mulheres"
+              />
+              <Fact label="Emenda parlamentar" value="40820012" />
+              <Fact
+                label="Processo administrativo (SEI)"
+                value="21260.003030/2026-24"
+              />
+              <Fact
+                label="Dotação orçamentária"
+                value="Ação 21GG · PTRES 262877 · UG 810012 · NE 2026NE000136"
               />
               <Fact label="Programa" value="650002026000" />
               <Fact label="Nº da proposta" value="031246/2026" />
