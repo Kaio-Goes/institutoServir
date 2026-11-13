@@ -118,7 +118,7 @@ export default function TransparenciaPage() {
             <dl className="mt-6 grid gap-3 sm:grid-cols-2">
               <Fact
                 label="Beneficiário"
-                value={`Instituto Servir · CNPJ ${site.cnpj}`}
+                value={`Instituto Bethel · CNPJ ${site.cnpj}`}
               />
               <Fact
                 label="Situação"
@@ -141,6 +141,7 @@ export default function TransparenciaPage() {
                 value="Secretaria Nacional de Autonomia Econômica e Política de Cuidados · Ministério das Mulheres"
               />
               <Fact label="Emenda parlamentar" value="40820012" />
+              <Fact label="Autoria da Emenda" value="Leila Barros" />
               <Fact
                 label="Processo administrativo (SEI)"
                 value="21260.003030/2026-24"
@@ -250,7 +251,7 @@ export default function TransparenciaPage() {
             <dl className="mt-6 grid gap-3 sm:grid-cols-2">
               <Fact
                 label="Beneficiário"
-                value={`Instituto Servir · CNPJ ${site.cnpj}`}
+                value={`Instituto Bethel · CNPJ ${site.cnpj}`}
               />
               <Fact label="Valor" value="R$ 400.000,00" />
               <Fact label="Vigência" value="10/08/2025 a 10/08/2028" />
