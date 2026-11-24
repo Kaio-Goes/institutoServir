@@ -21,6 +21,10 @@ const mulheresDocs: Doc[] = [
     label: "Proposta e Plano de Trabalho aprovado",
     href: "/docs/proposta-plano-de-trabalho-aprovada.pdf",
   },
+  {
+    label: "Painel de Transparência – Parcerias gov.br",
+    href: "/docs/painel-transparencia-parceriasgov.pdf",
+  },
 ];
 
 const mulheresCursos = [
